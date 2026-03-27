@@ -13,7 +13,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="mx-auto max-w-full px-2 md:px-20 py-24 text-black overflow-x-hidden"
+      className="ml-4 md:ml-0 mx-auto max-w-full px-2 md:px-20 py-24 text-black overflow-x-hidden"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <motion.div {...fadeInUp} className="pr-4 text-center md:text-left">
@@ -41,7 +41,7 @@ export default function About() {
             <div className="absolute top-0 left-0 w-24 md:w-100 h-full bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
 
             <div className="flex w-full animate-marquee-stats">
-              <div className="flex gap-4 md:gap-16 min-w-full shrink-0 justify-around px- md:px-8" >
+              <div className="flex gap-4 md:gap-16 min-w-full shrink-0 justify-around px-2 md:px-8" >
                 {[
                   { label: 'Years', value: '15+' },
                   { label: 'Programs', value: '20+' },
