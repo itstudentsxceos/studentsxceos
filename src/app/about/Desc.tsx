@@ -35,11 +35,10 @@ export default function Desc() {
       viewport={{ once: true }}
     >
         <h2 className="text-xl md:text-3xl font-medium mb-3">Evolution into an Accelerator</h2>
-        <p className="text-sm md:text-lg max-w-5xl mx-auto font-light md:font-normal mb-15 tracking-wider">
-            Founded in October 2010 by students at the Institut Teknologi Bandung (ITB), StudentsxCEOs (SxC) began with a 
-            fundamental question: “What comes after graduation?” Our founders realized that academic excellence alone wasn&apos;t 
-            enough to navigate the complexities of the industry. They created SxC to bridge the gap between high-potential students
-            and the leaders currently shaping the business landscape.
+        <p className="text-sm md:text-lg max-w-5xl mx-auto font-light md:font-normal mb-7 md:mb-15 tracking-wider">
+          What started as &quot;Meet the CEO&quot; sessions has evolved into Indonesia&apos;s premier strategic leadership accelerator 
+          and think-tank. We have expanded into a nationwide network that connects selected students from reputable universities with prominent industry 
+          players. Our platform is designed to boost professional networks and expand practical knowledge through the direct exchange of ideas and experiences.
         </p>
     </motion.div>
 
@@ -61,7 +60,7 @@ export default function Desc() {
               whileHover={{ scale: 1.04 }}
             >
             <Image
-              src="/heroabout-bg.jpg"
+              src="/about-pic0.png"
               alt="Hero"
               fill
               priority
@@ -81,16 +80,14 @@ export default function Desc() {
             >
                 <h3 className="text-lg md:text-2xl font-medium mt-6 mb-3">Evolution into an Accelerator</h3>
                 <p className="text-sm md:text-base font-normal max-w-5xl mx-auto font-light mb-8 tracking-wider">
-                    Founded in October 2010 by students at the Institut Teknologi Bandung (ITB), StudentsxCEOs (SxC) began with a 
-                    fundamental question: “What comes after graduation?” Our founders realized that academic excellence alone wasn&apos;t 
-                    enough to navigate the complexities of the industry. They created SxC to bridge the gap between high-potential students 
-                    and the leaders currently shaping the business landscape.
-                </p>
-                <h3 className="text-lg md:text-2xl font-medium mb-3">Redefining Leadership</h3>
-                <p className="text-sm md:text-base font-normal max-w-5xl mx-auto font-light mb-7 tracking-wider">
                     What started as &quot;Meet the CEO&quot; sessions has evolved into Indonesia&apos;s premier strategic leadership accelerator 
                     and think-tank. We have expanded into a nationwide network that connects selected students from reputable universities with prominent industry 
                     players. Our platform is designed to boost professional networks and expand practical knowledge through the direct exchange of ideas and experiences.
+                </p>
+                <h3 className="text-lg md:text-2xl font-medium mb-3">Redefining Leadership</h3>
+                <p className="text-sm md:text-base font-normal max-w-5xl mx-auto font-light mb-7 tracking-wider">
+                  At SxC, we define a &quot;CEO&quot; not just by a title, but by the level of responsibility. Our programs involve the highest-ranking corporate executives and administrators, from Owners and Founders to VPs and CxOs.
+                  We believe that by learning from those in charge of total management, our members gain the strategic mindset required to become the next generation of business leaders.
                 </p>
             </motion.div>
         </div>
@@ -99,51 +96,20 @@ export default function Desc() {
     <div className="block md:hidden space-y-3 p-0">
     
     <motion.div
-      className="w-full h-[200px] relative"
+      className="w-full h-[250px] relative mb-7"
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, ease: easeOut }}
       viewport={{ once: true }}
     >
         <Image
-        src="/heroabout-bg.jpg"
+        src="/about-pic0.png"
         alt="Hero"
         fill
         className="object-cover rounded-xl"
         />
     </motion.div>
 
-    <div className="grid grid-cols-2 gap-3">
-        <motion.div
-          className="h-[120px] relative"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: easeOut, delay: 0.1 }}
-          viewport={{ once: true }}
-        >
-        <Image
-            src="/heroabout-bg.jpg"
-            alt="Hero"
-            fill
-            className="object-cover rounded-xl"
-        />
-        </motion.div>
-
-        <motion.div
-          className="h-[120px] relative mb-6"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: easeOut, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-        <Image
-            src="/heroabout-bg.jpg"
-            alt="Hero"
-            fill
-            className="object-cover rounded-xl"
-        />
-        </motion.div>
-    </div>
 
     <motion.div
       className="md:hidden relative p-[2px] rounded-xl bg-[var(--primary-50)]/10 backdrop-blur-md w-full"
@@ -156,17 +122,15 @@ export default function Desc() {
             <div className="w-full text-center">
                 <h3 className="text-xl font-medium mt-7 mb-3">Redefining Leadership</h3>
                 <p className="text-sm font-light max-w-5xl mx-auto font-light mb-7 tracking-wider">
-                    What started as &quot;Meet the CEO&quot; sessions has evolved into Indonesia&apos;s premier strategic leadership accelerator 
-                    and think-tank. We have expanded into a nationwide network that connects selected students from reputable universities with prominent industry 
-                    players. Our platform is designed to boost professional networks and expand practical knowledge through the direct exchange of ideas and experiences.
+                  At SxC, we define a &quot;CEO&quot; not just by a title, but by the level of responsibility. Our programs involve the highest-ranking corporate executives and administrators, from Owners and Founders to VPs and CxOs.
+                  We believe that by learning from those in charge of total management, our members gain the strategic mindset required to become the next generation of business leaders.
                 </p>
             </div>
             <div className="w-full text-center">
                 <h3 className="text-xl font-medium mt-3 mb-3">Our Purpose</h3>
                 <p className="text-sm font-light max-w-5xl mx-auto font-light mb-7 tracking-wider">
-                    What started as &quot;Meet the CEO&quot; sessions has evolved into Indonesia&apos;s premier strategic leadership accelerator 
-                    and think-tank. We have expanded into a nationwide network that connects selected students from reputable universities with prominent industry 
-                    players. Our platform is designed to boost professional networks and expand practical knowledge through the direct exchange of ideas and experiences.
+                  Today, StudentsxCEOs stands as a catalyst for Indonesia&apos;s future economy. We serve as the home for a balanced, connected, and high-performing community, uniting ambitious students who are dedicated to driving Indonesia toward becoming a globally advanced and developed country.
+                  We nurture and connect the nation&apos;s top talent, ensuring they are prepared to take on leadership roles and contribute meaningfully to the industries they enter. We don&apos;t just prepare you for the job market; we prepare you to lead it.
                 </p>
             </div>
         </div>
@@ -182,10 +146,8 @@ export default function Desc() {
     >
         <h2 className="text-xl md:text-3xl font-medium mb-3 mt-20">Our Purpose</h2>
         <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal tracking-wide">
-            What started as &quot;Meet the CEO&quot; sessions has evolved into Indonesia&apos;s premier strategic leadership accelerator 
-            and think-tank. We have expanded into a nationwide network that connects selected students from reputable universities with 
-            prominent industry players. Our platform is designed to boost professional networks and expand practical knowledge through 
-            the direct exchange of ideas and experiences.
+          Today, StudentsxCEOs stands as a catalyst for Indonesia&apos;s future economy. We serve as the home for a balanced, connected, and high-performing community, uniting ambitious students who are dedicated to driving Indonesia toward becoming a globally advanced and developed country.
+          We nurture and connect the nation&apos;s top talent, ensuring they are prepared to take on leadership roles and contribute meaningfully to the industries they enter. We don&apos;t just prepare you for the job market; we prepare you to lead it.
         </p>
     </motion.div>
 

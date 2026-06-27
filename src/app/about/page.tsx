@@ -4,9 +4,9 @@ import Desc from "./Desc";
 import Vision from "./Vision";
 import Method from "./Method";
 import Values from "./Values";
-import Speaker from "./Speakers";
 import GrowthSection from "./Growth";
 import Footer from "@/components/Footer";
+import CTA from "./cta";
 
 export default function About() {
   return (
@@ -18,7 +18,7 @@ export default function About() {
       <Method />
       <Values />
       <GrowthSection />
-      <Speaker />
+      <CTA />
       <Footer />
     </main>
   );

@@ -46,6 +46,7 @@
   --primary-700: #07224F;
   --primary-800: #071C3E;
   --primary-900: #07152F;
+  --primary-950: #121926;
 
   /* Secondary */
   --secondary-200: #70BBDD;
@@ -101,6 +102,21 @@ body {
 
 .animate-marquee-logos {
   animation: marquee-logos 25s linear infinite;
+}
+
+.animate-marquee-text {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee-logos-reverse {

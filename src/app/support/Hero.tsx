@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[47vh] md:h-[55vh] px-6 md:px-16 py-20 md:py-15 text-center overflow-hidden">
+    <section className="relative w-full h-[40%] px-6 md:px-16 py-20 md:py-15 text-center overflow-hidden">
       {/* Hero BG */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.97 }}
         transition={{ duration: 1.2, ease: 'easeOut' }}
-        className="absolute top-0 left-0 w-full h-full overflow-hidden bg-gradient-to-b from-[var(--primary-700)] to-[var(--color-green)]"
+        className="absolute top-0 left-0 w-full h-full overflow-hidden bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)]"
       >
       </motion.div>
 
@@ -20,7 +20,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-2xl md:text-3xl font-medium mt-20 md:mt-40 glow-text tracking-wide"
+          className="text-2xl md:text-4xl font-medium mt-15 md:mt-20 glow-text tracking-wide"
         >
           Support Our Mission
         </motion.h1>

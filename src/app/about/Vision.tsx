@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckCircle } from "react-feather";
+import { Award, Briefcase, CheckCircle, TrendingUp } from "react-feather";
 import { motion, easeOut } from "framer-motion";
 
 export default function Vision() {
@@ -11,6 +11,12 @@ export default function Vision() {
     "Building capabilities to become globally competitive business leaders.",
     "Creating a unified, fraternal culture of high-performing individuals and winning teams.",
     "Delivering impact through a repeatable model that creates sustainable economic value."
+    ];
+    const iconlist = [
+      <CheckCircle key={1}/>,
+      <Briefcase key={2} />,
+      <Award key={3} />,
+      <TrendingUp key={4} />
     ];
 
   return (
@@ -82,7 +88,7 @@ export default function Vision() {
                   whileHover={{ scale: 1.03 }}
                 >
                 <div className={icon}>
-                  <CheckCircle />
+                  {iconlist[i]}
                 </div>
                 <p className="text-sm md:text-md font-normal my-auto text-gray-800 tracking-wide">{text}</p>
                 </motion.div>

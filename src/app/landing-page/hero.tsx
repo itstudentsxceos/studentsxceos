@@ -1,70 +1,106 @@
-// src/components/Hero.tsx
 'use client';
-import Image from 'next/image';
-//import { useState } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import Image from "next/image";
+import { motion, easeOut } from "framer-motion";
+import { ArrowUpRight, Briefcase, Calendar, MapPin, UserCheck, Users } from "react-feather";
+import { FaGraduationCap } from "react-icons/fa";
+
+const stats = [
+  {
+    icon: <Users size={20}/>,
+    value: "70,000+",
+    label: "Future Leaders Impacted",
+  },
+  {
+    icon: <FaGraduationCap size={20} />,
+    value: "2,500",
+    label: "Alumni Created",
+  },
+  {
+    icon: <Briefcase size={20} />,
+    value: "100+",
+    label: "Corporate Partners",
+  },
+  {
+    icon: <UserCheck size={20} />,
+    value: "300+",
+    label: "Active Fellows",
+  },
+  {
+    icon: <Calendar size={20} />,
+    value: "15+",
+    label: "Years of Impact",
+  },
+  {
+    icon: <MapPin size={20} />,
+    value: "5",
+    label: "Active Chapters",
+  },
+];
 
 export default function Hero() {
-  //const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   return (
-    <div className="relative w-full mx-auto h-200 rounded-b-[20px] overflow-hidden flex flex-col shadow-[0px_6px_30px_rgba(0,0,0,0.4)]">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-background.jpg"
-          alt="Background community"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-linear-to-br from-[#121926] to-[#0A3C8E] drop-shadow-[0_0_20px_rgba(10,60,142,0.6)] opacity-90"></div>
-        <div className="absolute pointer-events-none -bottom-48 -right-48 w-[701px] h-[657px] rounded-full bg-gradient-to-b from-[#296A90] to-[#CCE0FF] blur-[300px]"></div>
-        <div className="absolute pointer-events-none w-[701px] h-[657px] bg-[#3FB4A0] opacity-100 blur-[275px] rounded-full -bottom-90 -right-10"></div>
-      </div>
+    <div className="px-3 md:px-10 pt-17">
+      <motion.section
+        className="relative w-full text-left h-[80vh] md:h-[calc(100vh-4.25rem)] rounded-2xl overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: easeOut }}
+      >
+        {/* Hero Image */}
+        <div className="absolute top-0 left-[-5rem] w-[calc(100%+5rem)] h-full overflow-hidden">
+          <motion.div
+            className="relative w-full h-full overflow-hidden"
+            initial={{ scale: 1.2 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: easeOut }}
+          >
+            <Image
+              src="/hero-bg1.png"
+              alt="Hero"
+              fill
+              priority
+              className="object-cover object-top"
+            />
+          </motion.div>
 
-      <div className="flex-1 flex flex-col items-center justify-center text-center pb-10 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: 'easeOut' as const }}
-        ></motion.div>
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,var(--color-black)_0%,var(--primary-800)_15%,var(--primary-700)_30%,var(--primary-600)_45%,rgba(9,47,110,0.8)_100%)] md:bg-[linear-gradient(to_right,var(--color-black)_0%,var(--primary-800)_15%,var(--primary-700)_30%,var(--primary-600)_45%,rgba(9,47,110,0.8)_100%)]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.97 }}
+            transition={{ duration: 1.2, ease: easeOut }}
+          />
+        </div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: 'easeOut' as const }}
-          className="text-[36px] md:text-[56px] text-white font-medium drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] tracking-wide leading-tight"
-        >
-          Nurture and Connect{' '}
-          <span className="hidden md:inline">Future </span>
-        </motion.h1>
+        {/* Hero Content */}
+        <div className="relative z-10 flex flex-col items-start justify-center h-[80vh] md:min-h-[calc(100vh-4.25rem)] px-5 md:px-15 text-white">
+          <motion.h1
+            className="text-4xl md:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[var(--secondary-200)] to-[var(--color-white)]"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: easeOut, delay: 0.5 }}
+          >
+            Nurture and Connect
+          </motion.h1>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: 'easeOut' as const }}
-          className="text-[36px] md:text-[56px] font-medium mt-2 inline-block bg-clip-text bg-linear-to-r from-[#70BBDD] to-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] text-transparent tracking-wide"
-        >
-          <span className="inline md:hidden">Future </span> Business Leaders
-        </motion.h2>
+          <motion.h1
+            className="text-4xl md:text-5xl font-medium md:mt-4 tracking-wide"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: easeOut, delay: 0.6 }}
+          >
+            Future Business Leaders
+          </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: 'easeOut' as const }}
-          style={{ opacity: 1 }}
-          className="mt-6 max-w-xl text-normal md:text-lg font-normal tracking-wide text-gray-100 leading-relaxed mx-auto"
-        >
-          Connecting ambitious students with world-class business leaders to
-          shape the future of Indonesia.
-        </motion.p>
+          <motion.p
+            className="text-[16px] md:text-[18px] max-w-[90%] md:max-w-lg font-thin mt-5 tracking-widest"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: easeOut, delay: 0.8 }}
+          >
+            Connecting ambitious students with world-class business leaders to shape the future of Indonesia.
+          </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: 'easeOut' as const }}
-        >
-          <a href="#community">
+          <a href="/about">
             <motion.button
               initial="initial"
               whileHover="hover"
@@ -77,14 +113,14 @@ export default function Hero() {
                 },
               }}
               transition={{ duration: 0.4 }}
-              className="relative cursor-pointer mt-10 bg-white overflow-hidden py-2 px-8 rounded-xl text-base z-0"
+              className="relative cursor-pointer mt-7 bg-white overflow-hidden py-2 px-5 rounded-lg text-base z-0"
             >
               <motion.div
                 variants={{
                   initial: { scaleX: 0 },
                   hover: { scaleX: 1.1 },
                 }}
-                transition={{ duration: 0.4, ease: 'easeInOut' as const }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
                 style={{ originX: 0, willChange: 'transform' }}
                 className="absolute inset-0 bg-linear-to-br from-[#121926] to-[#0A3C8E] -z-10"
               />
@@ -96,12 +132,35 @@ export default function Hero() {
                 }}
                 className="relative z-10 font-medium"
               >
-                Join our community
+                Learn More <ArrowUpRight size={25} className="inline-block ml-1 mb-1" />
               </motion.span>
             </motion.button>
           </a>
-        </motion.div>
-      </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 flex items-end w-full md:w-1/2">
+
+          <div className="hidden md:block absolute left-0 bottom-[calc(100%-1px)] w-3 h-3 bg-[radial-gradient(circle_at_top_right,transparent_12px,#ffffff_12.5px)] z-10 shrink-0"></div>
+
+          <div className="absolute -bottom-2 -left-2 w-10 h-10 bg-white z-0"></div>
+
+          <div className="w-full overflow-hidden md:rounded-tr-[12px] rounded-none py-3 bg-white z-10 shrink-0">
+            <div className="animate-marquee-text flex gap-5 whitespace-nowrap pl-4">
+              {[...stats, ...stats].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 text-[var(--primary-700)] text-md">
+                  <span>{item.icon}</span>
+                  <span className="font-bold text-slate-900">{item.value}</span>
+                  <span className="text-slate-800">{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="hidden md:block w-3 h-3 bg-[radial-gradient(circle_at_top_right,transparent_12px,#ffffff_12.5px)] shrink-0 -ml-[1px]"></div>
+
+        </div>
+
+      </motion.section>
     </div>
   );
 }
